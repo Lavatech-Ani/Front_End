@@ -1,48 +1,111 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+}
 
 .navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
   float: left;
-  padding: 12px;
+  font-size: 16px;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.navbar a:hover {
-  background-color: #000;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-.active {
-  background-color: #4CAF50;
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10x;
+  background-color: #ccc;
+  height: 250%;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16x;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #4f4f4f;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%
+    height: auto;
   }
-  
-
 }
 </style>
+</head>
 <body>
 
-
-
 <div class="navbar">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i></a> 
+<a href="#"><i class="fa fa-align-justify"></i></a>
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i></a> 
   <a href="#">HTML</a> 
   <a href="#">CSS</a> 
   <a href="#">JAVASCRIPT</a>
@@ -50,16 +113,239 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <a href="#">PYTHON</a> 
   <a href="#">PHP</a>
   <a href="#">BOOTSTRAP</a> 
-  <a href="#">HOW TO</a> 
-  <a href="#">MORE</a>
-  <a href="#">REFERENCEC</a> 
-  <a href="#">EXERCISES</a> 
+   <a href="#">HOW TO</a> 
   
+  
+  <div class="dropdown">
+    <button class="dropbtn"> MORE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      
+      <div class="row">
+        <div class="column">
+          <h2>HTML and CSS</h2>
+		  <a href="#">Learn HTML</a>
+          <a href="#">Learn CSS</a>
+          <a href="#">Learn Bootstrap</a>
+		  <a href="#">Learn W3.CSS</a>
+		  <a href="#">Learn Colors</a>
+          <a href="#">Learn Icons</a>
+		  <a href="#">Learn Graphics</a>
+          <a href="#">Learn SVG</a>
+          <a href="#">Learn Canvas</a>
+		  <a href="#">Learn HOW TO</a>
+		  <a href="#">Learn Sass</a>
+		  <a href="#">Learn HOW TO</a>
+		  <a href="#">Learn Sass</a>
+         
+		  
+        </div>
+        <div class="column">
+          <h2>JavaScript</h2>
+          <a href="#">Learn JavaScript</a>
+          <a href="#">Learn jQuery</a>
+          <a href="#">Learn React</a>
+		  <a href="#">Learn AngularJS</a>
+		  <a href="#">Learn JSON</a>
+          <a href="#">Learn AJAX</a>
+		  <a href="#">Learn W3.JS</a>
+		  
+		  <h2>Programming</h2>
+		  <a href="#">Learn Python</a>
+          <a href="#">Learn Java</a>
+          <a href="#">Learn C++</a>
+		  <a href="#">Learn C#</a>
+		  <a href="#">Learn Machin Learning</a>
+		  
+		  
+        </div>
+        
+		<div class="column">
+          <h2>Server Side</h2>
+          <a href="#">Learn SQL</a>
+          <a href="#">Learn PHP</a>
+          <a href="#">Learn ASP</a>
+		  <a href="#">Learn Node.js</a>
+		  <a href="#">Learn Raspberry Pi</a>
+          
+		  <h2>Web Building<h2>
+          <a href="#">Learn Templates</a>
+          <a href="#">Learn Statistics</a>
+          <a href="#">Learn Certificates</a>
+		  <a href="#">Learn Editor</a>
+		  <a href="#">Learn Development<a>
+		  <a href="#">Learn Editor</a>
+		  <a href="#">Learn Development<a>
+        
+		</div>
+		  
+		
+		<div class="column">
+          <h2>XML</h2>
+          <a href="#">Learn XML</a>
+          <a href="#">Learn XMl AJAX</a>
+          <a href="#">Learn XML DOM</a>
+		  <a href="#">Learn XML DTD</a>
+		  <a href="#">Learn XML Schema</a>
+		  <a href="#">Learn XSLT</a>
+		  <a href="#">Learn SPath</a>
+		  <a href="#">Learn XQuery</a>
+		   <a href="#">Learn XSLT</a>
+		  <a href="#">Learn SPath</a>
+		  <a href="#">Learn XQuery</a>
+        </div>
+		
+      
+	    
+  </div>
+    </div>
+  
+  </div>
 
+  <div class="dropdown">
+    <button class="dropbtn"> 
+      <i class="fa fa-caret-down"></i>REFERENCEC
+    </button>
+    <div class="dropdown-content">
+      
+      <div class="row">
+        <div class="column">
+          <h2>HTML</h2>
+		  <a href="#">HTML Tag Reference</a>
+          <a href="#">HTML Event Reference</a>
+          <a href="#">HTML Color Reference</a>
+		  <a href="#">HTML Attribute Reference</a>
+		  <a href="#">HTML Canvas Reference</a>
+          <a href="#">HTML SVG Reference</a>
+		  <a href="#">HTML Character Sets</a>
+          <a href="#">Google Maps Reference</a>
+		  
+		   <h2>CSS</h2>
+		  <a href="#">CSS Reference</a>
+          <a href="#">CSS Browser Support</a>
+          <a href="#">CSS Selector Reference</a>
+		  <a href="#">Bootstrap3 Reference </a>
+		  <a href="#">Bootstrap 4 Reference</a>
+		  <a href="#">W3.CSS Reference</a>
+		  <a href="#">Icon Reference</a>
+		  <a href="#">Sass Reference</a>
+	
+       
+         
+		  
+        </div>
+        <div class="column">
+          <h2>JavaScript</h2>
+          <a href="#">JavaScript Reference</a>
+          <a href="#">HTML DOM Reference</a>
+          <a href="#">jQuery Reference</a>
+		  <a href="#">AngularJS Reference</a>
+		  <a href="#">W3.JS Reference</a>
+         
+		  
+		  <h2>Programming</h2>
+		  <a href="#">Python Reference</a>
+          <a href="#">Java Reference</a>
+          
+		  
+       </div>
+        
+		<div class="column">
+          <h2>Server Side</h2>
+          <a href="#">SQL Reference</a>
+          <a href="#">PHP Reference</a>
+          <a href="#">ASP Reference</a>
+		 
+          
+		  <h2>XML</h2>
+          <a href="#">XML Reference</a>
+          <a href="#">XML Http Reference</a>
+          <a href="#">XSLT Reference</a>
+		  <a href="#">XML Schema Referencer</a>
+		 
+        
+		</div>
+		  
+		
+		<div class="column">
+          <h2>Character Sets</h2>
+          <a href="#">HTML Character Sets</a>
+          <a href="#">HTML ASCII</a>
+          <a href="#">HTML ANSI</a>
+		  <a href="#">HTML Windows-1252</a>
+		  <a href="#">HTML ISO-8859-1</a>
+		  <a href="#">HTML UTF-8</a>
+		 
+        </div>
+		
+      
+	    
+  </div>
+    </div>
   
+  </div>
+   <div class="dropdown">
+    <button class="dropbtn"> 
+      <i class="fa fa-caret-down"></i>EXERCISES
+    </button>
+    <div class="dropdown-content">
+      
+      <div class="row">
+        <div class="column">
+          <h2>Exercises</h2>
+		  <a href="#">HTML Exercises</a>
+          <a href="#">CSS Exercises</a>
+          <a href="#">JavaScript Exercises</a>
+		  <a href="#">SQL Exercises</a>
+		  <a href="#">PHP Exercises</a>
+          <a href="#">Python Exercisese</a>
+		  <a href="#">jQuery Exercises</a>
+          <a href="#">Bootstrap Exercises </a>
+		  <a href="#">Java Exercises</a>
+		  <a href="#">C++ Exercises</a>
+          <a href="#">C# Exercises</a>
+		   
+	 </div>
+		  
+         
+        <div class="column">
+          <h2>Quizzes</h2>
+          <a href="#">HTML Quiz</a>
+          <a href="#">CSS Quize</a>
+          <a href="#">JavaScript Quiz</a>
+		  <a href="#">SQL Quiz</a>
+		  <a href="#">PHP Quiz</a>
+		  <a href="#">Python Quiz</a>
+		  <a href="#">jQuery Quiz</a>
+		  <a href="#">Bootstrap Quiz</a>
+		  <a href="#">XML Quiz</a>
+         
+		 
+      </div>
+        
+		<div class="column">
+          <h2>Certificates</h2>
+		  <a href="#">HTML Certificate</a>
+          <a href="#">CSS Certificate</a>
+          <a href="#">JavaScript Certificate</a>
+          <a href="#">SQL Certificate</a>
+		 <a href="#">PHP Certificate</a>
+          <a href="#">Python Certificate</a>
+          <a href="#">jQuery Certificate</a>
+          <a href="#">Bootstrap Certificate</a>
+		   <a href="#">XML Certificate</a>
+          
+		</div>
+    </div>
+  </div>
+  
+  </div>
+  
+  <a href="#"><i class="fa fa-adjust"></i></a>
   <a href="#"><i class="fa fa-globe"></i></a>
   <a href="#" onclick="open_search(this)" title="search"><i class="fa fa-search"></i></a>
-</div>
+  
 
 </body>
-</html> 
+</html>
