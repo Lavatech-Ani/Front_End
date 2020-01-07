@@ -32,12 +32,34 @@ body {
   padding: 14px 16px;
   text-decoration: none;
 }
-div.ex4 {
-  background-color: lightblue;
-  height: 40px;
-  width: 200px;  
-  overflow-y: visible;
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
+
+.sticky + .content {
+  padding-top: 60px;
+}
+#sidebar {
+	overflow-y : scroll;
+}
+#content {
+     
+	
+	overflow-y : scroll;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+   }
+
 
 </style>
 
@@ -65,19 +87,59 @@ div.ex4 {
 <div class="container-fluid">
 	
     <div class="row">
-    <div class="col-lg-3" style="background-color: gray">
-      <p>Welcome to our website</p>
-</div>
+    <div class="col-lg-2" style="background-color: white">
+	
+      <nav id="sidebar">
+	    <div id="sidebar-content" style="height: 2800px">
+	
+	   
+       <ul class="list-unstyled components">
+        <h4>HTML Tutorial</h4>
+        <a class="active" href="#"><i>HTML HOME</i></a>  
+          
+		  <li>		  
+          <a href="#">HTML Indroduction</a>
+		  </li>
+		 
+		  <li>		  
+          <a href="#">HTML Editors</a>
+		  </li>
+		  
+		  <li>		  
+          <a href="#">HTML Basics</a>
+		  </li>
+		 
+       </ul>
+	  
 
-<div class="col-lg-6" style="background-color: orange">
+
+    </nav>
+	</div>
+
+
+
+
+<div class="col-lg-8" style="background-color: orange">
   <p>Welcome to our Home page</p>
 </div>
   
-<div class="col-lg-3" style="background-color: gray">
+<div class="col-lg-2" style="background-color: gray">
    <p>Welcome to our website</p>
      </div>
    </div>      
  </div>
+ 
+ 
+ 
+ 
+<footer class="page-footer font-small cyan darken-3" style="background-color: pink">
+     <div class="footer-copyright text-center py-3">
+     <a href="https://www.justdial.com/Pune/Lavatech-Technology-Opposite-to-Mega-Center-Hadapsar/020PXX20-XX20-180123231024-H2G3_BZDET">Lavatech Tchnology</a>
+  </div>
+</footer>
+
+
+
 
  </body>
 </html>
